@@ -5,7 +5,38 @@ date:   2021-02-19 20:47:47 -0800
 categories: jekyll update
 ---
 
+ # AWS S3 bucket Terraform module
+Terraform module which creates S3 bucket on AWS with all (or almost all) features provided by Terraform AWS provider.
 
+#### This type of resources are supported:
+
+[S3 Bucket](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket "S3 Bucket")
+
+[S3 Bucket Notification](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_notification "S3 Bucket Notification") 
+
+[S3 Bucket Object](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_object "S3 Bucket Object") - 
+## Managing public access to buckets
+
+Access control list - ACL grants the access to buckets. Users can set permissions under [settings](https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-buckets-s3.html "settings")
+
+## Bucket Configuration and Rules
+
+Bucket configurations are supported unde Amazon S3. Users can request S3 API to create and manage [subresources](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingObjects.html "subresources").
+
+Bucket names must be between 3 and 63 characters long.
+
+Bucket names can consist only of lowercase letters, numbers, dots (.), and hyphens (-).
+
+Bucket names must begin and end with a letter or number.
+
+Bucket names must not be formatted as an IP address (for example, 192.168.5.4).
+
+Bucket names must be unique within a partition. A partition is a grouping of Regions. AWS currently has three partitions: aws (Standard Regions), aws-cn (China Regions), and aws-us-gov (AWS GovCloud [US] Regions).
+
+Buckets used with Amazon S3 Transfer Acceleration can't have dots (.) in their names. For more information about Transfer Acceleration, see Configuring fast, secure file transfers using Amazon S3 Transfer Acceleration.
+**Resources
+
+[aws_bucket.this](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket "aws_bucket.this")
 Bucket names must be between 3 and 63 characters long.
 
 Bucket names can consist only of lowercase letters, numbers, dots (.), and hyphens (-).
